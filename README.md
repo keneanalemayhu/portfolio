@@ -71,15 +71,3 @@ npm run lint:css:fix
 ## Design Reference
 
 This project follows a Figma template provided for the course. All fonts, spacing, colors, and layout are designed to match it exactly.
-
----
-
-## Contributing
-
-This is an individual project, part of a learning program. No contributions are accepted.
-
----
-
-## 📄 License
-
-This project is licensed for educational purposes.
