@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# VS Code
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Env
+.env
