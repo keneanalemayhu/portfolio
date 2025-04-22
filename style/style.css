@@ -84,6 +84,50 @@ body {
   top: 10px;
 }
 
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(96, 112, 255, 0.9);
+  backdrop-filter: blur(2px);
+  color: white;
+  text-align: left;
+  padding: 6rem 2rem;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle menu visibility */
+#menu-toggle:checked ~ .mobile-menu {
+  display: block;
+}
+
+.close-mobile-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
 .hero {
   display: flex;
   justify-content: center;
