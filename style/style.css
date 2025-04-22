@@ -6,7 +6,7 @@
 
 html,
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: Arial, sans-serif;
 }
 
@@ -91,12 +91,6 @@ body {
   display: none;
 }
 
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
 .social-links {
   margin-top: 15px;
   display: flex;
@@ -110,10 +104,11 @@ body {
 
 .hamburger {
   display: none;
+  font-size: 24px;
+  cursor: pointer;
   width: 30px;
   height: 24px;
   position: relative;
-  cursor: pointer;
   margin-left: auto;
 }
 
