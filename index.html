@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="navbar">
         <h1>Kenean</h1>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <ul class="navitems">
           <li><a href="index.html">Portfolio</a></li>
           <li><a href="about.html">About</a></li>
@@ -18,25 +29,29 @@
         </ul>
       </div>
     </header>
+
     <section class="hero">
-      <div class="container">
-        <h1>I’m Kenean.</h1>
-        <h2>Glad to see you!</h2>
-        <p>
-          I’m a software developer! I can help you build a product, feature or
-          website Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don’t hesitate to contact
-          me.
-        </p>
-        <a href="#">Let’s connect</a>
+      <div class="hero-content">
+        <div class="container">
+          <h1>I’m Kenean.</h1>
+          <h2>Glad to see you!</h2>
+          <p>
+            I’m a software developer! I can help you build a product, feature or
+            website Look through some of my work and experience! If you like
+            what you see and have a project you need coded, don’t hesitate to
+            contact me.
+          </p>
+          <a href="#">Let’s connect</a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fas fa-hand-peace"></i></a>
+        </div>
       </div>
-      <div class="social-links">
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-medium"></i></a>          
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#" target="_blank"><i class="fas fa-hand-peace"></i></a>
-      </div>      
     </section>
   </body>
 </html>
