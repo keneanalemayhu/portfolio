@@ -27,6 +27,19 @@
           <li><a href="pages/about.html">About</a></li>
           <li><a href="pages/contact.html">Contact</a></li>
         </ul>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <span
+            class="close-mobile-menu"
+            onclick="document.getElementById('menu-toggle').checked = false;"
+            >&times;</span
+          >
+          <ul>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -53,5 +66,198 @@
         </div>
       </div>
     </section>
+
+    <section class="projects">
+      <div class="project-card">
+        <img src="img/project1.png" alt="Tonic Project Screenshot" />
+        <div class="project-info">
+          <h3>Tonic</h3>
+          <ul class="project-meta">
+            <li>CANOPY</li>
+            <li>&bull;</li>
+            <li>Back End Dev</li>
+            <li>&bull;</li>
+            <li>2015</li>
+          </ul>
+          <p>
+            A daily selection of privately personalized reads; no accounts or
+            sign-ups required.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li><s>Javascript</s></li>
+          </ul>
+          <a
+            href="#"
+            class="project-btn"
+            data-title="Tonic"
+            data-meta="CANOPY &bull; Back End Dev &bull; 2015"
+            data-img="img/project1.png"
+            data-description="A daily selection of privately personalized reads; no accounts or sign-ups required."
+            data-tags="HTML,CSS,Javascript"
+            >See project
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="img/project2.png" alt="Tonic Project Screenshot" />
+        <div class="project-info">
+          <h3>Tonic</h3>
+          <ul class="project-meta">
+            <li>CANOPY</li>
+            <li>&bull;</li>
+            <li>Back End Dev</li>
+            <li>&bull;</li>
+            <li>2015</li>
+          </ul>
+          <p>
+            A daily selection of privately personalized reads; no accounts or
+            sign-ups required.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li><s>Javascript</s></li>
+          </ul>
+          <a
+            href="#"
+            class="project-btn"
+            data-title="Tonic"
+            data-meta="CANOPY &bull; Back End Dev &bull; 2015"
+            data-img="img/project2.png"
+            data-description="A daily selection of privately personalized reads; no accounts or sign-ups required."
+            data-tags="HTML,CSS,Javascript"
+            >See project
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+          <h3></h3>
+          <ul class="project-meta"></ul>
+          <img src="" alt="Project Screenshot" />
+          <p></p>
+          <ul class="tags"></ul>
+          <div class="modal-buttons">
+            <a href="#" class="project-btn">See live</a>
+            <a href="#" class="project-btn">See source</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Myself</h2>
+          <p>
+            Hello! I'm a software developer! I can help you build a product,
+            feature or website. Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don’t
+            hesitate to contact me.
+          </p>
+          <a href="#" class="cta-btn">Let’s connect</a>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-medium"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+
+          <a href="#" class="resume-btn">Get my resume</a>
+        </div>
+
+        <div class="skills">
+          <h3>Languages</h3>
+          <ul class="skill-icons">
+            <li>
+              <img src="images/js-icon.png" alt="JavaScript" />
+              <p>JavaScript</p>
+            </li>
+            <li>
+              <img src="images/html-icon.png" alt="HTML" />
+              <p>HTML</p>
+            </li>
+            <li>
+              <img src="images/css-icon.png" alt="CSS" />
+              <p>CSS</p>
+            </li>
+          </ul>
+
+          <details>
+            <summary>Frameworks</summary>
+          </details>
+          <details>
+            <summary>Skills</summary>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="contact" id="contact">
+      <div class="contact-container">
+        <h2>Contact me</h2>
+        <p>
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding, I’d love to help
+          with it!
+        </p>
+        <form action="#" method="post">
+          <input type="text" placeholder="Lorem Ipsum" required />
+          <input type="email" placeholder="loremipsum@gmail.com" required />
+          <textarea
+            placeholder="Write your message here..."
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Get in touch</button>
+        </form>
+      </div>
+    </footer>
+
+    <script>
+      const modal = document.getElementById("modal");
+      const closeBtn = document.getElementById("closeModal");
+
+      const modalTitle = modal.querySelector("h3");
+      const modalMeta = modal.querySelector(".project-meta");
+      const modalImg = modal.querySelector("img");
+      const modalDesc = modal.querySelector("p");
+      const modalTags = modal.querySelector(".tags");
+
+      document.querySelectorAll(".project-btn").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Set modal content
+          modalTitle.textContent = button.dataset.title;
+          modalMeta.innerHTML = button.dataset.meta;
+          modalImg.src = button.dataset.img;
+          modalDesc.textContent = button.dataset.description;
+
+          // Tags
+          const tags = button.dataset.tags.split(",");
+          modalTags.innerHTML = tags.map((tag) => `<li>${tag}</li>`).join("");
+
+          // Show modal
+          modal.style.display = "flex";
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
